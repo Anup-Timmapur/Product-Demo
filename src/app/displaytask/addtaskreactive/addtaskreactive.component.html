@@ -1,0 +1,23 @@
+
+<div class="container">
+
+  <h1>Sign Up Form</h1>
+<form [formGroup]="signup" (ngSubmit)="onAddTaskReactive()"  >
+    <div class="form-group" >
+      <label>Task ID</label>
+      <input name="Id" formControlName="id"  type="text" class="form-control" placeholder="Enter Task ID">
+    </div>
+    <div class="form-group" >
+      <label>Task Title</label>
+      <input name="Title" formControlName="title"  type="text" class="form-control" placeholder="Enter Title ">
+      </div>
+    <div class="form-group" >
+      <label>Task Status</label>
+      <input name="Status" formControlName="status" type="text" class="form-control" placeholder="Enter password ">
+    </div>
+
+    <div class="form-group">
+      <button type="submit" class="form-control btn btn-primary" >Add Task</button>
+    </div>
+  </form>
+</div>

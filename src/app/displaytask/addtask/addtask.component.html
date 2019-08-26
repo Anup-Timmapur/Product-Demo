@@ -1,0 +1,25 @@
+<div class="container">
+
+    <h1>Sign Up Form</h1>
+  <form (ngSubmit)="onAddTask(f)" #f="ngForm" >
+      <div class="form-group" >
+        <label>Task ID</label>
+        <input name="Id" required  ngModel #id="ngModel"  type="text" class="form-control" placeholder="Enter Task ID">
+        <label class="alert alert-danger" *ngIf="id.hasError('required') && !id.pristine"  >ID is required.</label>
+      </div>
+      <div class="form-group" >
+        <label>Task Title</label>
+        <input name="Title" required  ngModel #title="ngModel"  type="text" class="form-control" placeholder="Enter Title ">
+        <label class="alert alert-danger" *ngIf="title.hasError('required') && !title.pristine" >Title is required</label>
+        </div>
+      <div class="form-group" >
+        <label>Task Status</label>
+        <input name="Status" required #status="ngModel" ngModel type="text" class="form-control" placeholder="Enter password ">
+        <label class="alert alert-danger" *ngIf="status.hasError('required') && !status.pristine"  >Password is required.</label>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" class="form-control btn btn-primary" >Add Task</button>
+      </div>
+    </form>
+  </div>
